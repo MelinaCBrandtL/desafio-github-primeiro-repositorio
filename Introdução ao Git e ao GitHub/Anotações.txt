@@ -1,2 +1,178 @@
 Link para Download do Git: https://git-scm.com/downloads
 O Git Bash é um terminal extendido para otimizar o uso do Git.
+
+cd - Abre uma pasta
+cd .. - retorna a pasta anterior
+ls - lista os arquivos na pasta
+git clone - Você clona o repositório na máquina.
+mkdir - cria uma pasta
+git commit - para commitar as alterações realizadas
+git push - você "empurra" os arquivos na máquina para o repositório. 
+
+Códigos que utilizei nesta aula:
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace
+$ ls
+livro-receitas/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace
+$ mkdir Dev
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace
+$ ls
+Dev/  livro-receitas/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace
+$ cd Dev/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev
+$ mkdir Git
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev
+$ ls
+Git/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev
+$ cd Git/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git
+$ mkdir DIO
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git
+$ ls
+DIO/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git
+$ cd DIO/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ git clone https://github.com/MelinaCBrandtL/desafio-github-primeiro-repositorio.git
+Cloning into 'desafio-github-primeiro-repositorio'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (1/1), done.
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ cd desafio-github-primeiro-repositorio/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ ls
+README.md
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ cd..
+bash: cd..: command not found
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ cd ..
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ cd ..
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git
+$ cd ..
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev
+$ cd Git/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git
+$ cd DIO/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ ls
+'Introdução ao Git e ao GitHub'/   desafio-github-primeiro-repositorio/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ ls
+desafio-github-primeiro-repositorio/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO
+$ cd desafio-github-primeiro-repositorio/
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "Introdu\303\247\303\243o ao Git e ao GitHub/"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git add *
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git commit -m "Inclusão das anotações do curso de Git/GitHub"
+[main 60ac38d] Inclusão das anotações do curso de Git/GitHub
+ 1 file changed, 2 insertions(+)
+ create mode 100644 "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git push origin mais
+error: src refspec mais does not match any
+error: failed to push some refs to 'https://github.com/MelinaCBrandtL/desafio-github-primeiro-repositorio.git'
+
+Brandt@NOTLGW1002 MINGW32 /c/Workspace/Dev/Git/DIO/desafio-github-primeiro-repositorio (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 493 bytes | 493.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/MelinaCBrandtL/desafio-github-primeiro-repositorio.git
+   d7d30c7..60ac38d  main -> main
+
